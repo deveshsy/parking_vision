@@ -1,4 +1,7 @@
+torch
+torchvision
 opencv-python
 numpy
-scikit-learn
+requests
 matplotlib
+scikit-learn

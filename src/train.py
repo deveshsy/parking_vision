@@ -1,30 +1,32 @@
 import os
-import cv2
-import numpy as np
+import torch
+import torch.optim as optim
+# These would be your actual model imports from the Martin Marek repo
+# from models.rcnn import RCNN 
 
-# Define paths relative to the project root
-# The Action-Camera Parking dataset should be placed here locally
-DATASET_NAME = "Action-Camera_Parking"
-DATASET_DIR = os.path.join("..", "dataset", DATASET_NAME)
-MODELS_DIR = os.path.join("..", "models")
+def main():
+    # 1. Set Device (GPU or CPU)
+    device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+    print(f"Using device: {device}")
 
-def check_dataset():
-    if not os.path.exists(DATASET_DIR):
-        print(f"--- DATASET NOT FOUND ---")
-        print(f"Please download the '{DATASET_NAME}' dataset.")
-        print(f"Place it at: {os.path.abspath(DATASET_DIR)}")
-        return False
-    print(f"Dataset found at: {DATASET_DIR}")
-    return True
+    # 2. Dataset Paths
+    # The dataset you found usually has a specific 'data' subfolder
+    data_path = os.path.join("..", "dataset", "Action-Camera_Parking", "data")
+    
+    if not os.path.exists(data_path):
+        print(f"Error: Dataset not found at {data_path}")
+        return
 
-def train_segmentation():
-    print("Initializing Semantic Segmentation training...")
-    # 1. Load images from DATASET_DIR/raw
-    # 2. Pre-process for your model (Resizing, Normalization)
-    # 3. Define your model (e.g., U-Net, DeepLabV3)
-    # 4. Start training loop
-    print("Training complete. Saving model to ../models/parking_segmentation.pth")
+    print("Loading Action-Camera Parking Dataset...")
+    # Here you would call acpds.create_datasets(data_path)
+    
+    # 3. Initialize Model (Example: RCNN)
+    # model = RCNN().to(device)
+    print("Model initialized. Ready for training.")
+
+    # 4. Training Loop
+    # This is where you would call the train_model function
+    print("To start training, run: python train.py")
 
 if __name__ == "__main__":
-    if check_dataset():
-        train_segmentation()
+    main()
