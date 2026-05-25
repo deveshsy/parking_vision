@@ -1,0 +1,18 @@
+# Ignore local datasets
+dataset/
+extracted_patches/
+*.mp4
+*.jpg
+*.png
+
+# Ignore trained model binaries
+*.pkl
+*.h5
+*.pth
+models/*
+!models/.gitkeep
+
+# System files
+.DS_Store
+__pycache__/
+.venv/
