@@ -1,0 +1,18 @@
+displayName: Action-Camera Parking
+labelTypes:
+- Semantic_seg_map
+license:
+- MIT
+mediaTypes:
+- Image
+paperUrl: https://arxiv.org/pdf/2107.12207v1.pdf
+publishDate: "2021"
+publishUrl: https://github.com/martin-marek/parking-space-occupancy
+publisher:
+- PosAm
+tags:
+- Vehicle
+- Parking Spot
+taskTypes:
+- Semantic Segmentation
+‌​‌‌​​​​‌​​​‌‌‌‌‌​​‌‌​‌​‌​​‌​​​‌‌​‌‌‌​‌‌‌​​‌‌‌‌​‌​​​‌​‌‌‌​​‌‌‌‌​‌​‌‌​​‌‌‌​​‌‌‌‌​‌​​‌‌‌​‌
