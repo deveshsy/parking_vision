@@ -9,12 +9,15 @@ A computer vision project to detect parking slot occupancy.
 - `models/`: Trained model files (ignored by Git, except for `.gitkeep`).
 - `dataset/`: Local folder for training images (ignored by Git).
 
-## Workflow
+## Dataset
 
-1.  **Data Collection**: Place raw images or videos in the `dataset/` folder.
-2.  **Mapping**: Run `src/crop_tool.py` to define parking slot coordinates in `config/slots.json`.
-3.  **Training**: Run `src/train.py` to extract patches and train the ML model.
-4.  **Inference**: Run `src/inference.py` to test the model on live or recorded footage.
+We are using the **Action-Camera Parking** dataset from OpenDataLab (~727MB).
+
+1.  Download the dataset from: [OpenDataLab Link](https://opendatalab.com/OpenDataLab/Action-Camera_Parking)
+2.  Extract it into the `dataset/` folder.
+3.  Ensure the folder name is `Action-Camera_Parking`.
+
+**DO NOT commit the dataset folder to GitHub.** The `.gitignore` file is already set up to prevent this.
 
 ## Collaboration
 
